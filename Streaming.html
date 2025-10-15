@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <title>Servizi di Streaming in Italia – Quote di mercato e punti di forza (Q3 2025)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      color: #333;
+      background-color: #fff;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    p.intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+      color: #555;
+    }
+    #chart {
+      width: 900px;
+      max-width: 100%;
+      height: 600px;
+      margin: 0 auto;
+    }
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #222;
+    }
+    .share {
+      font-weight: bold;
+      color: #0078d7;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quote di mercato e punti di forza dei principali servizi di streaming in Italia (Q3 2025)</h1>
+  <p class="intro">L’analisi mostra le quote di mercato aggiornate e i principali fattori competitivi che distinguono le piattaforme di streaming nel mercato italiano. I dati derivano da <strong>JustWatch (Q3 2025)</strong> e da elaborazioni basate su report AGCOM ed EY.</p>
+
+  <div id="chart"></div>
+
+  <div class="platforms">
+    <div class="card">
+      <h3>Prime Video <span class="share">– 26%</span></h3>
+      <p>Ha superato Netflix nel 2025 grazie all’integrazione con l’abbonamento Amazon Prime e all’offerta di eventi sportivi live.  
+      Ampio catalogo di film e serie originali, presenza costante di contenuti locali e funzionalità avanzate di suggerimento.</p>
+    </div>
+
+    <div class="card">
+      <h3>Netflix <span class="share">– 25%</span></h3>
+      <p>Rimane la piattaforma con il maggior numero di utenti medi (8,1 milioni nel 2024).  
+      Forte identità di brand, produzioni originali di successo e capacità di adattamento alle preferenze locali.</p>
+    </div>
+
+    <div class="card">
+      <h3>Disney+ <span class="share">– 19%</span></h3>
+      <p>Consolida la terza posizione grazie all’espansione dei franchise Marvel, Pixar e Star Wars.  
+      Si distingue per la qualità tecnica e per un target familiare ben definito.</p>
+    </div>
+
+    <div class="card">
+      <h3>Apple TV+ <span class="share">– 8%</span></h3>
+      <p>Continua a crescere con produzioni originali di alta qualità e un posizionamento premium.  
+      Interfaccia curata, streaming stabile e integrazione perfetta con l’ecosistema Apple.</p>
+    </div>
+
+    <div class="card">
+      <h3>NOW <span class="share">– 6%</span></h3>
+      <p>Servizio di Sky dedicato allo streaming on demand. Offre sport, film e serie di qualità con una formula flessibile senza decoder.  
+      Apprezzato per la copertura degli eventi sportivi e la qualità video.</p>
+    </div>
+
+    <div class="card">
+      <h3>Infinity+ <span class="share">– 5%</span></h3>
+      <p>Piattaforma italiana del gruppo Mediaset, combina contenuti gratuiti con offerte premium.  
+      Forte presenza di cinema italiano e programmi locali, apprezzata per l’accessibilità e la varietà.</p>
+    </div>
+
+    <div class="card">
+      <h3>Paramount+ <span class="share">– 5%</span></h3>
+      <p>In crescita costante grazie all’espansione del catalogo e all’arrivo di produzioni internazionali.  
+      Offre un buon equilibrio tra film, serie e contenuti per famiglie.</p>
+    </div>
+
+    <div class="card">
+      <h3>Discovery+ <span class="share">– 2%</span></h3>
+      <p>Specializzata in documentari e programmi factual, si rivolge a un pubblico interessato all’intrattenimento informativo.  
+      Piattaforma stabile con offerte mirate e costi contenuti.</p>
+    </div>
+
+    <div class="card">
+      <h3>DAZN <span class="share">– 3%</span></h3>
+      <p>Leader per lo sport in streaming, con i diritti principali della Serie A e altre competizioni calcistiche.  
+      Target specifico e fidelizzazione forte grazie alle dirette e alla copertura esclusiva.</p>
+    </div>
+
+    <div class="card">
+      <h3>MUBI <span class="share">– 1%</span></h3>
+      <p>Piattaforma di cinema d’autore, curata e selettiva.  
+      Pubblico di nicchia, ma riconosciuta per la qualità delle proposte e l’approccio culturale.</p>
+    </div>
+  </div>
+
+  <script>
+    var labels = ["Prime Video", "Netflix", "Disney+", "Apple TV+", "NOW", "Infinity+", "Paramount+", "Discovery+", "MUBI", "DAZN"];
+    var values = [26, 25, 19, 8, 6, 5, 5, 2, 1, 3];
+    var hoverTexts = [
+  "Prime Video – Supera Netflix per preferenze di pubblico; integra servizi Amazon e offre eventi sportivi in diretta.",
+  "Netflix – Maggior numero di utenti medi (8,1 milioni nel 2024); contenuti originali e forte brand identity.",
+  "Disney+ – Consolida il 3° posto con 3 milioni di utenti; catalogo di franchise Marvel, Pixar e Star Wars.",
+  "Apple TV+ – Crescita costante grazie a produzioni originali di alta qualità e integrazione con dispositivi Apple.",
+  "NOW – Servizio Sky dedicato allo streaming sportivo e d’intrattenimento; formula flessibile senza decoder.",
+  "Infinity+ – Piattaforma italiana Mediaset; mix di contenuti gratuiti e premium, cinema italiano e varietà.",
+  "Paramount+ – Espansione progressiva; buon equilibrio tra film, serie e contenuti per famiglie.",
+  "Discovery+ – Specializzata in documentari e factual; offre programmi informativi e intrattenimento realistico.",
+  "MUBI – Piattaforma di cinema d’autore curata e selettiva; pubblico di nicchia ma riconosciuta per la qualità e l’approccio culturale.",
+  "DAZN – Principale servizio sportivo con 3,1 milioni di utenti; diritti esclusivi per la Serie A e altre competizioni."
+];
+
+
+    var data = [{
+      type: 'pie',
+      labels: labels,
+      values: values,
+      hole: 0.35,
+      hoverinfo: 'text+percent+value',
+      hovertext: hoverTexts,
+      textinfo: 'label+percent',
+      textposition: 'inside',
+      textfont: { color: 'white', size: 14 },
+      automargin: true,
+      showlegend: false
+    }];
+
+    var layout = {
+      margin: { t: 50, b: 50, l: 50, r: 50 },
+      annotations: [{
+        font: { size: 14 },
+        showarrow: false,
+        text: 'Fonte: JustWatch (Q3 2025) – elaborazione',
+        x: 0.5,
+        y: -0.1,
+        xref: 'paper',
+        yref: 'paper'
+      }]
+    };
+
+    Plotly.newPlot('chart', data, layout, {responsive: true});
+  </script>
+</body>
+</html>
